@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Didi Dhan Rashi ATM 💸</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <div class="top-tag">SPECIAL BHAI DOOJ EDITION</div>
+
+        <div class="logo">💰</div>
+
+        <h1>Didi Dhan Rashi ATM</h1>
+        <p class="subtitle">
+            Your loving younger brother welcomes you!
+        </p>
+
+        <div class="account-card">
+            <div>Available Balance</div>
+            <h2>₹ ∞</h2>
+            <small>Subject to brother's approval</small>
+        </div>
+
+        <div class="withdraw-section">
+            <label for="amount">Enter withdrawal amount</label>
+
+            <div class="amount-input">
+                <span>₹</span>
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Enter amount"
+                    min="0"
+                    step="any"
+                >
+            </div>
+
+            <button id="withdrawBtn" class="primary-btn">
+                WITHDRAW MY DHAN RASHI →
+            </button>
+
+            <button id="fateBtn" class="fate-btn">
+                🎲 LET FATE DECIDE MY GIFT
+            </button>
+        </div>
+
+        <div class="footer">
+            Made with ❤️ by your favourite Anuj
+        </div>
+    </main>
+
+    <!-- Secret Heart -->
+    <button id="heartBtn" class="heart-btn" aria-label="Secret message">
+        ❤️
+    </button>
+
+    <!-- Processing Modal -->
+    <div id="processingModal" class="modal">
+        <div class="modal-box">
+            <div class="spinner"></div>
+            <h2>Processing Withdrawal...</h2>
+
+            <div id="processingMessages" class="processing-messages"></div>
+        </div>
+    </div>
+
+    <!-- Result Modal -->
+    <div id="resultModal" class="modal">
+        <div class="modal-box result-box">
+            <button class="close-btn" id="closeResult">×</button>
+            <div id="resultContent"></div>
+        </div>
+    </div>
+
+    <!-- Selfie Camera Modal -->
+    <div id="cameraModal" class="modal">
+        <div class="modal-box camera-box">
+            <button class="close-btn" id="closeCamera">×</button>
+
+            <h2>Identity Verification Required 📸</h2>
+            <p>Before approving this transaction...</p>
+
+            <video id="cameraVideo" autoplay playsinline></video>
+
+            <h2 class="camera-caption">
+                SHAKAL DEKHI HAI APNI? 😂
+            </h2>
+
+            <button id="cameraDone" class="primary-btn">
+                Haan, dekh li. Ab paise do!
+            </button>
+        </div>
+    </div>
+
+    <!-- Fate Modal -->
+    <div id="fateModal" class="modal">
+        <div class="modal-box">
+            <div class="logo">🎲</div>
+            <h2>Are You Feeling Lucky?</h2>
+
+            <p id="fateMessage">
+                Are you sure you have trust on your luck?
+            </p>
+
+            <button id="fateYes" class="primary-btn">
+                YES, I TRUST MY LUCK!
+            </button>
+
+            <button id="fateNo" class="secondary-btn">
+                I HAVE CHANGED MY MIND
+            </button>
+        </div>
+    </div>
+
+    <!-- Secret Message Modal -->
+    <div id="secretModal" class="modal">
+        <div class="modal-box">
+            <button class="close-btn" id="closeSecret">×</button>
+            <div class="logo">❤️</div>
+            <h2>Dear Didi!</h2>
+            <p>
+                Paise ke liye itna drama karwa rahi ho 😂
+                <br><br>
+                Par sach mein, duniya ki sabse pyaari behen
+                mujhe mili hai.
+                <br><br>
+                Hamesha khush rehna.
+                <br>
+                Happy Bhai Dooj! ❤️
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

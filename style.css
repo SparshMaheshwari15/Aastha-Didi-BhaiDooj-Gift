@@ -1,0 +1,387 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff5e6, #ffe0b2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #43220c;
+}
+
+.container {
+    width: 100%;
+    max-width: 460px;
+    background: #fff;
+    border-radius: 25px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(100, 50, 0, 0.15);
+}
+
+.top-tag {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #fff0d9;
+    color: #a45b00;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo {
+    font-size: 48px;
+    margin: 18px 0 10px;
+}
+
+h1 {
+    font-size: 27px;
+    font-weight: 800;
+    color: #8b3f13;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: #888;
+    margin-top: 8px;
+}
+
+.account-card {
+    margin: 30px 0;
+    padding: 22px;
+    background: linear-gradient(135deg, #8b3f13, #d27b21);
+    border-radius: 18px;
+    color: white;
+}
+
+.account-card h2 {
+    font-size: 38px;
+    margin: 5px 0;
+}
+
+.account-card small {
+    opacity: 0.8;
+    font-size: 11px;
+}
+
+.withdraw-section {
+    text-align: left;
+}
+
+.withdraw-section label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.amount-input {
+    display: flex;
+    align-items: center;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    padding: 0 15px;
+    margin-bottom: 18px;
+}
+
+.amount-input span {
+    font-size: 22px;
+    font-weight: 700;
+    color: #a45b00;
+}
+
+.amount-input input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 16px 12px;
+    font-size: 20px;
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    border: none;
+    transition: 0.2s;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #a84912, #e18a22);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.primary-btn:hover {
+    filter: brightness(1.1);
+}
+
+.fate-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 14px;
+    border-radius: 12px;
+    background: #fff0d9;
+    color: #9a4c13;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px dashed #d27b21;
+}
+
+.footer {
+    margin-top: 28px;
+    color: #aaa;
+    font-size: 11px;
+}
+
+/* Heart Button */
+
+.heart-btn {
+    position: fixed;
+    right: 22px;
+    bottom: 20px;
+    background: transparent;
+    font-size: 30px;
+    filter: drop-shadow(0 3px 5px #999);
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Modals */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-box {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    background: white;
+    padding: 30px 22px;
+    border-radius: 20px;
+    text-align: center;
+    animation: appear 0.3s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-box h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #873d12;
+}
+
+.modal-box p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    font-size: 28px;
+    color: #777;
+}
+
+/* Processing */
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #eee;
+    border-top-color: #c16b20;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.processing-messages {
+    text-align: left;
+    margin-top: 22px;
+    font-size: 12px;
+    line-height: 2.4;
+}
+
+.processing-messages div {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Result */
+
+.result-box img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin: 12px 0;
+}
+
+.result-title {
+    font-size: 24px !important;
+    color: #a84c15 !important;
+}
+
+.result-text {
+    font-weight: 600;
+    margin: 12px 0 20px;
+}
+
+.receipt {
+    border: 2px dashed #c88b45;
+    background: #fffaf2;
+    padding: 18px;
+    margin: 15px 0;
+    text-align: left;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #43220c;
+}
+
+.receipt h3 {
+    text-align: center;
+    margin-bottom: 12px;
+    color: #8b3f13;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.receipt-success {
+    text-align: center;
+    color: #198754;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 13px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background: #8b3f13;
+    color: white;
+    font-weight: 700;
+}
+
+.secondary-btn {
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+    background: #eee;
+    color: #444;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Camera */
+
+.camera-box video {
+    width: 100%;
+    border-radius: 12px;
+    background: #111;
+    margin: 15px 0;
+    transform: scaleX(-1);
+}
+
+.camera-caption {
+    color: #c62828 !important;
+    font-weight: 800;
+    margin: 10px 0 20px !important;
+}
+
+/* Mobile */
+
+@media (max-width: 400px) {
+    .container {
+        padding: 28px 18px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+}
+
+/* Receipt printing */
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #receiptContent,
+    #receiptContent * {
+        visibility: visible;
+    }
+
+    #receiptContent {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .action-btn {
+        display: none;
+    }
+}
